@@ -1,0 +1,13 @@
+<div class="container">
+<p><b>Edit your post! </p></b>
+
+<form action="/posts/<%= @post.id %>" method="post">
+  <input type ="hidden" name="_method" value="PUT"/>
+  <br> User Name: <input type="text" name="post[post_creator]" value="<%= @post.post_creator%>"><br>
+  <br> Post Title: <input type="text" name="post[post_title]" value="<%= @post.post_title %>"><br>
+  <br> Price: <input type="text" name="post[post_price]"value="<%= @post.post_price %>"><br><br>
+  <p><b>Tell us more about your product:</p></b>
+  Product description: <input type="text" name="post[post_description]" value="<%= @post.post_description %>"><br><br>
+  <input type="submit" value="Submit"><br><br>
+</form>
+</div>

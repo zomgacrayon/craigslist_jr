@@ -1,0 +1,19 @@
+<div class="container">
+<H1> Category: <%=@category.category_title%> </H1>
+<p><b>Create your new post! </p></b>
+
+<form action="/categories/<%=@category.id%>/posts" method="post">
+  User Name: <input type="text" name="post[post_creator]"><br><br>
+  Post Title: <input type="text" name="post[post_title]"><br><br>
+  Price: <input type="text" name="post[post_price]"><br><br>
+  <p><b>Tell us more about your product:</p></b>
+  Product description: <input type="text" name="post[post_description]"><br><br>
+  <input type="submit" value="Submit"><br><br>
+</form>
+</div>
+
+<!--       t.string :post_creator
+      t.string :post_title
+      t.string :post_description
+      t.integer :post_price
+      t.string :random_post_id -->

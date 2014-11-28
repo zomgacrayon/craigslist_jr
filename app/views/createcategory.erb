@@ -1,0 +1,12 @@
+<div class="container">
+<H1> Create your new post! </h1>
+
+<form action="/categories/<%=@category.id%>/posts" method="post">
+  User Name: <input type="text" name="post[post_creator]"><br><br>
+  Post Title: <input type="text" name="post[post_title]"><br><br>
+  Price: <input type="text" name="post[post_price]"><br><br>
+  <p><b>Tell us more about your product:</p></b>
+  Product description: <input type="text" name="post[post_description]"><br><br>
+  <input type="submit" value="Submit"><br><br>
+</form>
+</div>

@@ -1,0 +1,21 @@
+<div class="container">
+<p> Posts on the <b><%= @category.category_title%> </b> Category: </p>
+<table>
+  <tr>
+    <td style="width:20%"><b> Title </td>
+    <td style="width:40%"><b> Description </td>
+    <td style="width:20%"><b> Price </td>
+  </tr>
+  <%@posts.each do |post|%>
+  <tr>
+    <td><%=post.post_title%></td>
+    <td><%=post.post_description%></td>
+    <td><%=post.post_price%></td>
+    <td><p><a href = "/posts/<%= post.id %>">View</a></p></td>
+    <td><p><a href = "/posts/<%= post.id %>/edit">Edit</a></p></td>
+    <%end%>
+</table>
+
+<p> Create new Post for this category: <a href ="/categories/<%= @category.id%>/posts/new">New</a></p>
+
+</div>
